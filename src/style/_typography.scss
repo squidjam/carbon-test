@@ -1,0 +1,49 @@
+@use 'sass:string';
+
+@font-face {
+  font-family: "MAT Sans";
+  src: url('./fonts/NunitoSans-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MAT Sans";
+  src: url('./fonts/NunitoSans-Italic.ttf') format('ttf');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MAT Sans";
+  src: url('./fonts/NunitoSans-Bold.ttf') format('ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "MAT Sans";
+  src: url('./fonts/NunitoSans-BoldItalic.ttf') format('ttf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+$type-family: (
+        'mono':
+        string.unquote(
+                        "system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', monospace"
+        ),
+        'sans':
+        string.unquote(
+                        "'MAT Sans', system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif"
+        ),
+);
+
+// Light and regular have the same value because we don't have a light value
+// for font-weight, so we use only the regular value whenever is intend to use
+// the light value
+$font-weights: (
+        'light': 400,
+        'regular': 400,
+        'bold': 700,
+);

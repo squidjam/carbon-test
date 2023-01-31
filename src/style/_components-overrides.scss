@@ -1,0 +1,239 @@
+@use './variables.scss' as variables;
+
+@use './colors.scss' as colors;
+
+@use '@carbon/styles/scss/config' with (
+  $prefix: variables.$mat-prefix
+);
+
+@use '@carbon/styles/scss/components/button/vars' with (
+  $button-border-radius: 4px
+);
+
+.#{variables.$mat-prefix}--data-table-header,
+.#{variables.$mat-prefix}--date-picker__input,
+.#{variables.$mat-prefix}--list-box__field,
+.#{variables.$mat-prefix}--list-box,
+.#{variables.$mat-prefix}--number input[type=number],
+.#{variables.$mat-prefix}--pagination,
+.#{variables.$mat-prefix}--search-input,
+.#{variables.$mat-prefix}--select-input,
+.#{variables.$mat-prefix}--text-input,
+.#{variables.$mat-prefix}--text-area {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.#{variables.$mat-prefix}--table-expand__button,
+.flatpickr-calendar,
+.numInputWrapper .numInput,
+.flatpickr-day,
+.flatpickr-prev-month,
+.flatpickr-next-month,
+.#{variables.$mat-prefix}--list-box__menu,
+.#{variables.$mat-prefix}--link,
+.#{variables.$mat-prefix}--number__control-btn,
+.#{variables.$mat-prefix}--pagination-nav__page,
+.#{variables.$mat-prefix}--tab--overflow-nav-button,
+.#{variables.$mat-prefix}--tile {
+  border-radius: 4px;
+}
+
+.#{variables.$mat-prefix}--time-picker__input > .#{variables.$mat-prefix}--text-input {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+}
+
+.#{variables.$mat-prefix}--time-picker__select > .#{variables.$mat-prefix}--select-input {
+  border-radius: 0;
+}
+
+.#{variables.$mat-prefix}--time-picker :last-child > .#{variables.$mat-prefix}--select-input {
+  border-top-left-radius: 0;
+  border-top-right-radius: 4px;
+}
+
+.#{variables.$mat-prefix}--modal-container {
+  border-radius: 8px;
+}
+
+.#{variables.$mat-prefix}--modal-close {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+.#{variables.$mat-prefix}--modal-footer {
+  height: auto;
+  margin: 0 1rem 1rem;
+}
+
+.#{variables.$mat-prefix}--modal-footer .#{variables.$mat-prefix}--btn {
+  max-width: none;
+  height: 3rem;
+  padding-bottom: 1rem;
+}
+
+.#{variables.$mat-prefix}--modal-footer .#{variables.$mat-prefix}--btn:not(.#{variables.$mat-prefix}--btn--primary) {
+  margin-right: 0.25rem;
+}
+
+.#{variables.$mat-prefix}--pagination .#{variables.$mat-prefix}--select__item-count .#{variables.$mat-prefix}--select-input__wrapper select.#{variables.$mat-prefix}--select-input,
+.#{variables.$mat-prefix}--pagination .#{variables.$mat-prefix}--select__page-number .#{variables.$mat-prefix}--select-input__wrapper select.#{variables.$mat-prefix}--select-input {
+  border-radius: 4px;
+  border: 0;
+}
+
+.#{variables.$mat-prefix}--pagination .#{variables.$mat-prefix}--select__item-count .#{variables.$mat-prefix}--select-input__wrapper,
+.#{variables.$mat-prefix}--pagination .#{variables.$mat-prefix}--select__page-number .#{variables.$mat-prefix}--select-input__wrapper {
+  margin: 0.25rem;
+}
+
+.#{variables.$mat-prefix}--pagination .#{variables.$mat-prefix}--select__item-count .#{variables.$mat-prefix}--select-input--inline__wrapper {
+  border-right: 1px solid var(--#{variables.$mat-prefix}-border-subtle);
+}
+
+.#{variables.$mat-prefix}--pagination .#{variables.$mat-prefix}--select__page-number .#{variables.$mat-prefix}--select-input--inline__wrapper {
+  border-left: 1px solid var(--#{variables.$mat-prefix}-border-subtle);
+}
+
+.#{variables.$mat-prefix}--pagination--sm,
+.#{variables.$mat-prefix}--pagination--sm .#{variables.$mat-prefix}--pagination__control-buttons .#{variables.$mat-prefix}--popover-container {
+  height: 2.5rem;
+}
+
+.#{variables.$mat-prefix}--pagination--md,
+.#{variables.$mat-prefix}--pagination--md .#{variables.$mat-prefix}--pagination__control-buttons .#{variables.$mat-prefix}--popover-container {
+  height: 3rem;
+}
+
+.#{variables.$mat-prefix}--pagination--lg,
+.#{variables.$mat-prefix}--pagination--lg .#{variables.$mat-prefix}--pagination__control-buttons .#{variables.$mat-prefix}--popover-container {
+  height: 3.5rem;
+}
+
+.#{variables.$mat-prefix}--pagination__control-buttons .#{variables.$mat-prefix}--popover-container {
+  border-left: 1px solid var(--#{variables.$mat-prefix}-border-subtle);
+}
+
+.#{variables.$mat-prefix}--pagination__control-buttons .#{variables.$mat-prefix}--pagination__button {
+  margin: 0.25rem;
+  border: 0;
+}
+
+.#{variables.$mat-prefix}--side-nav {
+  box-shadow: inset -1px 0 0 colors.$gray-200;
+}
+
+.#{variables.$mat-prefix}--side-nav__items {
+  padding: 1rem;
+}
+
+.#{variables.$mat-prefix}--side-nav__link {
+  padding: 1rem !important;
+  margin: 0;
+  width: 16rem;
+}
+
+.#{variables.$mat-prefix}--grid {
+  padding: 0 !important;
+}
+
+.#{variables.$mat-prefix}--tab-content {
+  padding: 0 !important;
+}
+
+.#{variables.$mat-prefix}--tabs button.#{variables.$mat-prefix}--tabs__nav-item--selected {
+  font-weight: bold;
+}
+
+.#{variables.$mat-prefix}--data-table {
+  padding: 0 !important;
+}
+
+.#{variables.$mat-prefix}--table-header-label {
+  font-weight: bold;
+}
+
+.#{variables.$mat-prefix}--content {
+  //padding: 0 !important;
+}
+
+.#{variables.$mat-prefix}--header {
+  background-color: colors.$blue-500 !important;
+}
+
+ul.#{variables.$mat-prefix}--accordion {
+  border-left: 1px solid var(--#{variables.$mat-prefix}-border-subtle);
+  border-right: 1px solid var(--#{variables.$mat-prefix}-border-subtle);
+  border-radius: 4px;
+}
+
+.#{variables.$mat-prefix}--row h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: colors.$gray-900;
+}
+
+.#{variables.$mat-prefix}--side-nav__menu .#{variables.$mat-prefix}--side-nav__menu-item a.#{variables.$mat-prefix}--side-nav__link,
+button.#{variables.$mat-prefix}--side-nav__submenu,
+.#{variables.$mat-prefix}--side-nav__link {
+  height: 3rem;
+}
+
+div.#{variables.$mat-prefix}--side-nav__icon > svg {
+  fill: var(--#{variables.$mat-prefix}-link-secondary)
+}
+
+.#{variables.$mat-prefix}--inline-notification,
+.#{variables.$mat-prefix}--toast-notification {
+  border-radius: 4px;
+}
+
+div.#{variables.$mat-prefix}--inline-notification--low-contrast::before{
+  border-radius: 0 4px 4px 0;
+  filter: none;
+}
+
+.#{variables.$mat-prefix}--toast-notification--low-contrast{
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+}
+
+// If carbon changes these types in the future, it has to be changed here in this list.
+// And if the "warning-alt" is changed, you have to change the IF expression that serves only for it.
+$types: 'error', 'info', 'success', 'warning';
+
+@each $notificationType in $types {
+  div.#{variables.$mat-prefix}--inline-notification--#{$notificationType}{
+    border-left: 4px solid var(--bx-support-#{$notificationType}-inverse);}
+  div.#{variables.$mat-prefix}--inline-notification--low-contrast.#{variables.$mat-prefix}--inline-notification--#{$notificationType}{
+    border-left: 4px solid var(--bx-support-#{$notificationType});}
+  div.#{variables.$mat-prefix}--inline-notification--low-contrast.#{variables.$mat-prefix}--inline-notification--#{$notificationType}::before{
+    border-color: var(--bx-notification-border-#{$notificationType});}
+}
+
+@each $notificationType in $types {
+  div.#{variables.$mat-prefix}--toast-notification--#{$notificationType}{
+    border-left: 4px solid var(--bx-support-#{$notificationType}-inverse);}
+  div.#{variables.$mat-prefix}--toast-notification--low-contrast.#{variables.$mat-prefix}--toast-notification--#{$notificationType}{
+    border-left: 4px solid var(--bx-support-#{$notificationType});
+    border-top-color: var(--bx-notification-border-#{$notificationType});
+    border-bottom-color: var(--bx-notification-border-#{$notificationType});
+    border-right-color: var(--bx-notification-border-#{$notificationType})}
+}
+
+.#{variables.$mat-prefix}--overflow-menu.bx--overflow-menu--open{
+  border-radius: 4px 4px 0 0;
+}
+
+.#{variables.$mat-prefix}--overflow-menu-options{
+  border-radius: 0 4px 4px 4px;
+}
+
+li.#{variables.$mat-prefix}--overflow-menu-options__option:first-child{
+  border-radius: 0 4px 0 0;
+}
+
+li.#{variables.$mat-prefix}--overflow-menu-options__option:last-child{
+  border-radius: 0 0 4px 4px;
+}

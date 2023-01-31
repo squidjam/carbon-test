@@ -1,0 +1,193 @@
+/**
+*** COLOR PALETTES
+**/
+
+/* BLUE */
+$blue-50: #e3f2fd;
+$blue-100: #bbedfb;
+$blue-200: #90caf9;
+$blue-300: #64b5f6;
+$blue-400: #42a5f4;
+$blue-500: #2196f3;
+$blue-600: #2086e2;
+$blue-700: #1976d2;
+$blue-800: #1565c0;
+$blue-900: #00478F;
+
+/* GRAY */
+$gray-0: #ffffff;
+$gray-50: #f5f5f5;
+$gray-100: #eeeeee;
+$gray-200: #e5e5e5;
+$gray-300: #e0e0e0;
+$gray-400: #bdbdbd;
+$gray-500: #9e9e9e;
+$gray-600: #757575;
+$gray-700: #616161;
+$gray-800: #424242;
+$gray-900: #212121;
+
+/* RED */
+$red-10: #FFEAE5;
+$red-20: #FFC0B3;
+$red-30: #FF9681;
+$red-40: #FF6D4E;
+$red-50: #FF421B;
+$red-60: #E72000;
+$red-70: #B32001;
+$red-80: #801701;
+$red-90: #4D0E00;
+$red-100: #1A0400;
+
+/* ORANGE */
+$orange-10: #FFDDCC;
+$orange-20: #FFBC99;
+$orange-30: #FF9A68;
+$orange-40: #FF7835;
+$orange-50: #FF681B;
+$orange-60: #FA5300;
+$orange-70: #E64F02;
+$orange-80: #CC4502;
+$orange-90: #B33C02;
+$orange-100: #993402;
+
+/* YELLOW */
+$yellow-10: #FFF3CC;
+$yellow-20: #FFE799;
+$yellow-30: #FFDB66;
+$yellow-40: #FFCF33;
+$yellow-50: #FFC91A;
+$yellow-60: #FFC300;
+$yellow-70: #E6B000;
+$yellow-80: #CC9C00;
+$yellow-90: #B38900;
+$yellow-100: #997500;
+
+/* GREEN */
+$green-10: #CCE5CC;
+$green-20: #99C999;
+$green-30: #66AF65;
+$green-40: #339332;
+$green-50: #1A8619;
+$green-60: #007B00;
+$green-70: #006D00;
+$green-80: #006000;
+$green-90: #005500;
+$green-100: #003D00;
+
+/* LIME */
+$lime-10: #F2FFE5;
+$lime-20: #D9FEB3;
+$lime-30: #C0FE7F;
+$lime-40: #A6FD4C;
+$lime-50: #8DFD19;
+$lime-60: #6EDB00;
+$lime-70: #5AB100;
+$lime-80: #407F00;
+$lime-90: #264C00;
+$lime-100: #0D1A00;
+
+/* TEAL */
+$teal-10: #E5FFFB;
+$teal-20: #B3FEF1;
+$teal-30: #80FDE9;
+$teal-40: #4DFDE1;
+$teal-50: #1AFCD7;
+$teal-60: #00DBB7;
+$teal-70: #00B194;
+$teal-80: #007E6A;
+$teal-90: #004C3F;
+$teal-100: #001A15;
+
+/* CYAN */
+$cyan-10: #E0F6FC;
+$cyan-20: #B2E8F7;
+$cyan-30: #7FDAF0;
+$cyan-40: #4BCAE8;
+$cyan-50: #22BFE1;
+$cyan-60: #00B5DA;
+$cyan-70: #00A5C6;
+$cyan-80: #0090AC;
+$cyan-90: #007896;
+$cyan-100: #005B67;
+
+/* VIOLET */
+$violet-10: #E2CCF8;
+$violet-20: #C59AF1;
+$violet-30: #A767EA;
+$violet-40: #8A35E2;
+$violet-50: #7C1CDF;
+$violet-60: #6D02DB;
+$violet-70: #6202C5;
+$violet-80: #5702AF;
+$violet-90: #4C029A;
+$violet-100: #410184;
+
+/* PINK */
+$pink-10: #FFE5F2;
+$pink-20: #FFB4DA;
+$pink-30: #FF82C1;
+$pink-40: #FF50A8;
+$pink-50: #FF1D8F;
+$pink-60: #DB006E;
+$pink-70: #B3035C;
+$pink-80: #800241;
+$pink-90: #4D0127;
+$pink-100: #1A000D;
+
+/**
+*** VARIANT PALETTES
+**/
+
+/* ACCENT */
+$accent-color-50: $blue-50;
+$accent-color-100: $blue-100;
+$accent-color-200: $blue-200;
+$accent-color-300: $blue-300;
+$accent-color-500: $blue-500;
+$accent-color-700: $blue-700;
+$accent-color-800: $blue-800;
+
+/* PRIMARY */
+$primary-color-50: $blue-50;
+$primary-color-100: $blue-100;
+$primary-color-200: $blue-200;
+$primary-color-300: $blue-300;
+$primary-color-500: $blue-500;
+$primary-color-700: $blue-700;
+$primary-color-800: $blue-800;
+
+/* SECONDARY */
+$secondary-color-0: $gray-0;
+$secondary-color-50: $gray-50;
+$secondary-color-100: $gray-100;
+$secondary-color-200: $gray-200;
+$secondary-color-300: $gray-300;
+$secondary-color-400: $gray-400;
+$secondary-color-500: $gray-500;
+$secondary-color-600: $gray-600;
+$secondary-color-700: $gray-700;
+$secondary-color-800: $gray-800;
+$secondary-color-900: $gray-900;
+
+$feedback-color-success: #8BC34A;
+$feedback-color-warning: #FFC107;
+$feedback-color-danger: #F44336;
+
+$extra-color-1: #e91e63;
+$extra-color-2: #4caf50;
+$extra-color-3: #3F51B5;
+$extra-color-4: #FF6F00;
+$extra-color-5: #9C27B0;
+$extra-color-6: #FFB300;
+
+$baker-primary-color--50: #BEFEF0;
+$baker-primary-color--100: #A0FEE9;
+$baker-primary-color--200: #63FDDB;
+$baker-primary-color--300: #27FCCD;
+$baker-primary-color--500: #02A783;
+$baker-primary-color--700: #017058;
+$baker-primary-color--800: #01382C;
+
+
+

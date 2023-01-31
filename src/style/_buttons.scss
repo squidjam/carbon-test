@@ -1,0 +1,19 @@
+@use './colors.scss' as colors;
+
+$button-token-overrides: (
+        button-primary: colors.$blue-500,
+        button-primary-hover: colors.$blue-700,
+        button-primary-active: colors.$blue-800,
+        button-secondary: colors.$gray-500,
+        button-secondary-hover: colors.$gray-700,
+        button-secondary-active: colors.$gray-800,
+        button-tertiary: colors.$blue-700,
+        button-tertiary-hover: colors.$blue-800,
+        button-tertiary-active: colors.$blue-800,
+        button-danger-primary: colors.$red-60,
+        button-danger-secondary: colors.$red-70,
+        button-danger-hover: colors.$red-70,
+        button-danger-active: colors.$red-80,
+        button-separator: colors.$gray-200,
+        button-disabled: colors.$gray-300,
+);

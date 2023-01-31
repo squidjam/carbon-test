@@ -1,0 +1,106 @@
+@use './light-theme.scss' as light;
+@use './colors.scss' as colors;
+@use './typography.scss' as types;
+
+@use './components-overrides.scss';
+
+@use '@carbon/type/scss/_font-family.scss' with (
+  $font-families: types.$type-family,
+  $font-weights: types.$font-weights
+);
+
+// Set the correct light theme
+@use '@carbon/styles/scss/themes';
+@use '@carbon/styles/scss/theme' with (
+  $fallback: themes.$white,
+  $theme: light.$light-theme
+);
+@use '@carbon/themes/scss/utilities';
+
+// Buttons, tags and notifications components tokens doesn't work properly
+// when setting directly on the theme, so we override the tokens directly
+// on the components
+// (Open issue: https://github.com/carbon-design-system/carbon/issues/12376)
+@use '@carbon/styles/scss/components/button/tokens' as button-tokens;
+@use './buttons.scss' as button-overrides;
+
+@use '@carbon/styles/scss/components/tag/tokens' as tag-tokens;
+@use './tags' as tag-overrides;
+
+@use '@carbon/styles/scss/components/notification/tokens' as notification-tokens;
+@use './notifications.scss' as notification-overrides;
+
+@use '@carbon/styles';
+@use '@carbon/grid';
+
+$button-tokens: utilities.merge(
+                button-tokens.$button-tokens,
+                button-overrides.$button-token-overrides
+);
+
+$tag-tokens: utilities.merge(
+                tag-tokens.$tag-tokens,
+                tag-overrides.$tag-token-overrides
+);
+
+$notification-tokens: utilities.merge(
+                notification-tokens.$notification-tokens,
+                notification-overrides.$notification-token-overrides
+);
+
+@include theme.add-component-tokens($button-tokens);
+@include theme.add-component-tokens($tag-tokens);
+@include theme.add-component-tokens($notification-tokens);
+
+// Emit the flex-grid styles
+@include grid.flex-grid();
+
+:root {
+  @include theme.theme();
+
+  .bx--g100,
+  .bx--90 {
+    --bx-background: #{colors.$accent-color-500};
+    --bx-background-hover: #{colors.$accent-color-700};
+    --bx-background-active: #{colors.$accent-color-800};
+    --bx-background-inverse: #{colors.$gray-800};
+    --bx-popover-background-color: #{colors.$gray-800};
+    --bx-border-subtle: #{colors.$gray-100};
+    --bx-text-inverse: #{colors.$gray-0};
+    --bx-text-secondary: #{colors.$gray-0};
+    --bx-icon-secondary: #{colors.$gray-0};
+  }
+  //.bx--white,
+  //.bx--g10 {
+  //--bx-background: #{colors.$accent-color-500}; // hover: 700 // active/down: 800 // focus: 700
+  //--bx-background-hover: #{colors.$accent-color-700};
+  //--bx-background-active: #{colors.$accent-color-800};
+  //--bx-background-inverse: #{colors.$gray-800};
+  //--bx-popover-background-color: #{colors.$gray-800};
+  //--bx-text-inverse: #{colors.$gray-0};
+  //--bx-text-secondary: #{colors.$gray-0};
+  //--bx-icon-secondary: #{colors.$gray-0};
+  //}
+}
+
+.bx-- {
+  &white, &g10, &g90, &g100, {
+    &:has(.bx--header) ~ .bx--content,
+    .bx--header ~ &:has(.bx--content),
+    &:has(.bx--header) ~ &:has(.bx--content),{
+      margin-top: 3rem;
+    }
+
+    &:has(.bx--side-nav) ~ .bx--content,
+    .bx--side-nav ~ &:has(.bx--content),
+    &:has(.bx--side-nav) ~ &:has(.bx--content) {
+      margin-left: 3rem;
+    }
+
+    &:has(.bx--side-nav--expanded) ~ .bx--content,
+    .bx--side-nav--expanded ~ &:has(.bx--content),
+    &:has(.bx--side-nav--expanded) ~ &:has(.bx--content) {
+      margin-left: 16rem;
+    }
+  }
+}

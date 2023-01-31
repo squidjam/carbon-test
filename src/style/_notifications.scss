@@ -1,0 +1,17 @@
+@use './colors.scss' as colors;
+
+$notification-token-overrides: (
+        notification-background-info: colors.$blue-100,
+        notification-background-success: colors.$green-10,
+        notification-background-warning: colors.$yellow-10,
+        notification-background-error: colors.$red-10,
+        notification-border-info: rgba(colors.$blue-500, 0.40),
+        notification-border-success: colors.$feedback-color-success,
+        notification-border-warning: colors.$feedback-color-warning,
+        notification-border-error: colors.$feedback-color-danger,
+        notification-action-hover: colors.$gray-0,
+        notification-action-tertiary-inverse: colors.$gray-0,
+        notification-action-tertiary-inverse-text: colors.$gray-100,
+        notification-action-tertiary-hover: colors.$gray-100,
+
+);
